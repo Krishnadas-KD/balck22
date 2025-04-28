@@ -1,0 +1,829 @@
+
+/* Main styles for Black Coffee Bar and Roastery */
+@font-face {
+    font-family: 'Antonio';
+    src: url('../fonts/Antonio-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Antonio';
+    src: url('../fonts/Antonio-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Antonio';
+    src: url('../fonts/Antonio-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MaisonNeue';
+    src: url('../fonts/MaisonNeue-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --black: #000000;
+    --dark-gray: #121212;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+}
+
+/* ========== BASE STYLES ========== */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 300;
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1 {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+/* ========== BUTTONS & LINKS ========== */
+.read-more-wrapper {
+    display: inline-flex;
+    align-items: stretch;
+    text-decoration: none;
+    margin-top: 0rem;
+}
+
+.read-more-btn {
+    font-size: 1.1rem;
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #fffcfc;
+    
+}
+
+.read-more-btn-footer {
+    font-size: 1.1rem;
+    display: inline-block;
+    background-color: #fffcfc;
+    color: #000000;
+    padding: 0px 10px; 
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #fffcfc;
+    height: 32px; 
+    line-height: 32px; 
+    white-space: nowrap;
+
+}
+
+.read-more-btn:hover {
+    background-color: #fffcfc;
+    color: #000;
+}
+
+.read-more-btn-footer:hover {
+    background-color: #000000;
+    color: #fffcfc;
+}
+
+.read-more-square {
+    display: flex;
+    width: 40px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+    margin-left: 3px;
+}
+
+.read-more-square svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000000;
+}
+
+/* ========== NAVIGATION ========== */
+.navbar {
+    font-weight: 700;
+    background-color: transparent;
+    padding: 1rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    order: 2;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-collapse {
+    order: 3;
+}
+
+.navbar-nav {
+    flex-direction: column;
+}
+
+.navbar-nav.ms-auto {
+    margin-top: 1rem;
+}
+
+.nav-link {
+    white-space: nowrap;
+    color: var(--white) !important;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.head-logo {
+    max-width: 8rem;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+    
+    .navbar-nav.ms-auto {
+        margin-top: 0;
+    }
+    
+    .nav-link {
+        margin: 0 0.8rem;
+        font-size: 1.04rem;
+    }
+    
+    .head-logo {
+        max-width: 10rem;
+    }
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+    padding-top: 1px;
+}
+
+.hero-image {
+    
+    max-height: 600px;
+    display: block;
+    margin-left: auto;
+    object-fit: cover;
+    width: 90vh;
+}
+
+.character-illustration {
+    width: 200px;
+    bottom: -50px;
+    left: 100px;
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    .hero-image {
+        height: 60vh;
+    }
+    .character-illustration {
+        width: 150px;
+        left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        height: 50vh;
+    }
+    .character-illustration {
+        
+        width: 120px;
+        left: 35%;
+        bottom: 30px;
+    }
+    .navbar-collapse{
+        padding:5px 0 0 0 ;
+        background-color: #000000bd;
+    }
+}
+
+/* ========== BOTTOM SECTION ========== */
+.bottom-section {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.line-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    padding: 0px 0;
+}
+
+.bottom-line {
+    flex-grow: 1;
+    height: 0.1rem;
+    background-color: var(--white);
+    margin-right: 1rem;
+}
+
+.big-22 {
+    max-height: 100px;
+}
+
+@media (min-width: 768px) {
+    .big-22 {
+        max-height: 150px;
+    }
+}
+
+/* ========== ABOUT SECTION ========== */
+.about-section {
+    padding: 1rem 0;
+}
+
+.about-text {
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+@media (min-width: 768px) {
+    .about-text {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-text {
+        max-width: 45%;
+    }
+}
+
+/* ========== ACADEMY SECTION ========== */
+.academy-section {
+    padding: 3rem 0;
+}
+
+.academy-section .row {
+    flex-direction: column-reverse;
+}
+
+.academy-img {
+    margin-top: 2rem;
+}
+
+.character-img {
+    display: none;
+    max-width: 65%;
+}
+
+.academy-text {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .academy-section .row {
+        flex-direction: row;
+    }
+    
+    .character-img {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* ========== SHOP SECTION ========== */
+.shop-section {
+    padding: 3rem 0;
+}
+
+.shop-background {
+    background-image: url('../images/shop22.JPG');
+    background-size:1557px 750px;
+    background-position: center;
+    background-repeat: no-repeat; /* important */
+    background-attachment: local; /* or remove this line completely */
+    width: 100%;
+    height: 50vh;
+
+    
+    max-height: 750px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-text {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .shop-background {
+        height: 70vh;
+        background-size:cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .shop-background {
+        height: 100vh;
+    }
+}
+
+/* ========== FOLLOW SECTION ========== */
+.follow-section {
+    padding: 3rem 0;
+}
+
+.follow-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.follow-images .col-6 {
+    margin-bottom: 1rem;
+}
+
+/* ========== FOOTER SECTION ========== */
+.footer-section {
+    padding: .2rem 0;
+}
+
+.footer-section .row > div {
+    margin-bottom: 2rem;
+}
+
+.footer-text {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    pointer-events: auto;
+    margin-bottom: 10px;
+    color: #dbdbdb;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    pointer-events: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.footer-input {
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    min-width: 200px;
+    height: 32px;
+    padding: 0 0px;
+}
+
+.footer-line {
+    height: 0.1rem;
+    background-color: var(--white);
+    width: 100%;
+}
+
+.footer-space {
+    margin-bottom: 1rem;
+    bottom: 150px;
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+    color: #dbdbdb;
+}
+@media (max-width: 768px) {
+    .footer-space {
+        margin-bottom: 1rem;
+        bottom: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .footer-input {
+        width: 300px;
+    }
+    
+}
+
+
+/* ========== SOCIAL ICONS ========== */
+.line-with-icons {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 0;
+    right: 0;
+    justify-content: end;
+    top: -40px;
+}
+
+.social-icons a {
+    color: #fff9f9;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.social-icons .fa-instagram {
+    font-size: 24px;
+}
+
+.social-icons .fa-tiktok {
+    font-size: 24px;
+}
+
+.social-icons .fa-facebook-f {
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    .social-icons {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    
+    .social-icons .fa-instagram,
+    .social-icons .fa-tiktok,
+    .social-icons .fa-facebook-f {
+        font-size: 30px;
+    }
+}
+
+/* ========== ZOOM HANDLING ========== */
+@media (max-resolution: 1dppx) {
+    body {
+        font-size: 1.1rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* ========== TOUCH DEVICE ADJUSTMENTS ========== */
+@media (hover: none) {
+    .nav-link, .read-more-btn, .social-icons a {
+        padding: 0.5rem;
+    }
+    
+    .read-more-square {
+        width: 40px;
+    }
+}
+
+.order-logo{
+    width: 90px; 
+    margin-top: 30px; 
+    margin-right: 10px;
+}
+.order-logo-round{
+    border-radius: 22px;
+}
+
+.order-img{
+    max-width: 400px; 
+    margin-top: 30px; 
+    margin: auto;
+}
+
+
+@media (max-width: 768px) {
+    .order-logo{
+        
+        margin: auto;
+    }
+    .padding-lg{
+        padding-top: 50px;
+    }
+    
+}
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+  }
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('../images/about-banner.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2; /* control only the background image opacity */
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Make sure content stays above the background */
+    color: white; /* Or any color you want */
+  }
+
+
+@media (max-width: 768px) {
+    .about-img{
+        min-width: 500px;
+    }
+
+}
+
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Floating animation for character illustrations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Subtle pulse for interactive elements */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Slide-in from right */
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Page load animations */
+body {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Hero section animations */
+.hero-content h1 {
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.hero-content p {
+    animation: slideInLeft 0.8s ease-out 0.4s both;
+}
+
+.hero-image {
+    animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+.character-illustration {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Button hover animations */
+.read-more-wrapper:hover {
+    animation: pulse 0.5s ease;
+}
+
+/* Image hover effects */
+.img-fluid.rounded {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid.rounded:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Academy character animation */
+.character-img {
+    animation: float 5s ease-in-out infinite 1s;
+}
+
+/* Shop section animation */
+.shop-background {
+    transition: background-size 0.8s ease;
+}
+
+.shop-background:hover {
+    background-size: 1600px 770px;
+}
+
+/* Footer character animation */
+.footer-section .big-22 {
+    animation: float 6s ease-in-out infinite 0.5s;
+}
+
+/* Social icons animation */
+.social-icons a {
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* Navigation underline animation */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 22 logo animation */
+.big-22 {
+    transition: transform 0.3s ease;
+}
+
+.big-22:hover {
+    transform: rotate(5deg);
+}
+
+/* Button arrow animation */
+.read-more-square svg {
+    transition: transform 0.3s ease;
+}
+
+.read-more-wrapper:hover .read-more-square svg {
+    transform: translateX(3px);
+}
+
+/* Section reveal animations */
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* ========== GO TO TOP BUTTON ========== */
+.go-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.go-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.go-top-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+.go-top-btn i {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .go-top-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
