@@ -1,5 +1,7 @@
-  // Prevent excessive zooming
-  document.addEventListener('gesturestart', function(e) {
+
+
+// Prevent excessive zooming
+document.addEventListener('gesturestart', function(e) {
     e.preventDefault();
 });
 
@@ -49,18 +51,31 @@ const goTopBtn = document.querySelector('.go-top-btn');
 
 // Show/hide button based on scroll position
 window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
-        goTopBtn.classList.add('active');
-    } else {
-        goTopBtn.classList.remove('active');
+    if (goTopBtn) {
+        if (window.pageYOffset > 300 ) {
+            goTopBtn.classList.add('active');
+        } else {
+            goTopBtn.classList.remove('active');
+        }
     }
 });
 
-// Smooth scroll to top when clicked
-goTopBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (goTopBtn) {
+    goTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
+  }
+// Smooth scroll to top when clicked
+
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.opacity = "0";
+      preloader.style.transition = "opacity 0.5s ease";
+      setTimeout(() => preloader.style.display = "none", 500);
+    }
+  });

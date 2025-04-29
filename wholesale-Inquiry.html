@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.1">
     <title>BLACK - Coffee Bar and Roastery</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/22_logo.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -12,6 +13,19 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div id="preloader">
+        <div class="coffee-container" style="margin: 200px auto">
+            <div class="steam-container">
+                <div class="steam"></div>
+                <div class="steam"></div>
+                <div class="steam"></div>
+            </div>
+            <div class="cup">
+                <div class="handle"></div>
+            </div>
+            <div class="plate"></div>
+        </div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark position-relative" >
         <div class="container">
@@ -46,7 +60,7 @@
                         <a class="nav-link" href="order-now.html">Order Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="location.html">Loyalty Programs</a>
+                        <a class="nav-link" href="loyalty-programs.html">Loyalty Programs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="location.html">Locations</a>
@@ -63,25 +77,15 @@
 
 
     <!-- Hero Section -->
-    <section class="background-container" >
+    <section class="background-container">
         <div class="container-fluid px-0 content">
             <div class="row g-0 align-items-center justify-content-center">
-                <div class="col-lg-5 order-lg-2 order-1 text-center">
-                    <div class="position-relative">
-                        <h1 class="hero-title">COMING SOON ....</h1>
-                    </div>
+                <div class="col-lg-5 order-lg-2 order-1 d-flex justify-content-center align-items-center">
+                    <h1 class="coming-soon text-center" >COMING SOON ....</h1>
                 </div>
-                <div class="col-lg-5 order-lg-2 order-1 text-end">
-                    <div class="position-relative">
-                        <img src="assets/images/character-1.png" alt="Character illustration"
-                             class="character-illustration img-fluid">
-                    </div>
-                </div>
-                
             </div>
         </div>
     </section>
-    
 
     
     <!-- Bottom Section with Line and Logo -->
@@ -89,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 line-container">
-                    <img src="assets/images/22_logo.svg" alt="22 Logo" class="big-22">
+                    <img src="assets/images/22_logo.png" alt="22 Logo" class="big-22">
                     <div class="bottom-line"></div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
                 <!-- Email Signup (Full width on mobile, 5 columns on desktop) -->
                 <div class="col-12 col-lg-5 mb-4 order-1 align-items-center text-center d-flex flex-column">
                     <p class="footer-text">Be the first to know about new roasts and workshop events</p>
-                    <div class="d-flex  mt-3 d-flex">
+                    <div class="d-flex  mt-3 d-flex" style="display: none !important;">
                         <input type="text" class="footer-input" placeholder="Email address">
                         <a href="#" class="read-more-wrapper ms-2">
                             <div class="read-more-btn-footer text-nowrap">SIGN ME UP</div>
@@ -125,42 +129,42 @@
                         <!-- Desktop: 3 columns (3 links each) -->
                         <!-- Mobile: Left column (5 links) -->
                         <div class="col-7 col-lg-4">
-                            <div class="d-flex flex-column">
-                                <a href="about.html" class="footer-link">ABOUT</a>
-                                <a href="wholesale-Inquiry.html" class="footer-link">Wholesale Inquiry</a>
-                                <a href="shop.html" class="footer-link">SHOP</a>
+                            <div class="d-flex flex-column footer-column">
+                                <div class="footer-link"><a href="about.html" class="nav-footer-link  py-1">ABOUT</a></div>
+                                <div class="footer-link"><a href="wholesale-Inquiry.html" class="nav-footer-link  py-1">Wholesale Inquiry</a></div>
+                                <div class="footer-link"><a href="shop.html" class="nav-footer-link py-1">SHOP</a></div>
                                 <!-- These 2 only show on mobile -->
                                 <div class="d-lg-none">
-                                    <a href="academy.html" class="footer-link">BLACK ACADEMY</a>
-                                    <a href="order-now.html" class="footer-link">ORDER NOW</a>
+                                    <div class="footer-link"><a href="academy.html" class="nav-footer-link py-1">BLACK ACADEMY</a></div>
+                                    <div class="footer-link"><a href="order-now.html" class="nav-footer-link py-1">ORDER NOW</a></div>
                                 </div>
                             </div>
                         </div>
-            
+                        
                         <!-- Desktop: Middle column (hidden on mobile) -->
                         <div class="d-none d-lg-block col-lg-4">
-                            <div class="d-flex flex-column">
-                                <a href="academy.html" class="footer-link">BLACK ACADEMY</a>
-                                <a href="order-now.html" class="footer-link">ORDER NOW</a>
-                                <a href="location.html" class="footer-link">LOCATIONS</a>
+                            <div class="d-flex flex-column footer-column">
+                                <div class="footer-link"><a href="academy.html" class="nav-footer-link py-1">BLACK ACADEMY</a></div>
+                                <div class="footer-link"><a href="order-now.html" class="nav-footer-link py-1">ORDER NOW</a></div>
+                                <div class="footer-link"><a href="location.html" class="nav-footer-link py-1">LOCATIONS</a></div>
                             </div>
                         </div>
-            
+                        
                         <!-- Desktop: Right column -->
                         <!-- Mobile: Right column (4 links) -->
                         <div class="col-5 col-lg-4">
-                            <div class="d-flex flex-column">
+                            <div class="d-flex flex-column footer-column">
                                 <!-- These 2 only show on desktop -->
                                 <div class="d-none d-lg-block">
-                                    <a href="location.html" class="footer-link">LOYALTY PROGRAM</a>
-                                    <a href="career.html" class="footer-link">CAREER</a>
+                                    <div class="footer-link"><a href="location.html" class="nav-footer-link py-1">LOYALTY PROGRAM</a></div>
+                                    <div class="footer-link"><a href="career.html" class="nav-footer-link py-1">CAREER</a></div>
                                 </div>
-                                <a href="contract.html" class="footer-link">CONTACT US</a>
+                                <div class="footer-link"><a href="contract.html" class="nav-footer-link py-1">CONTACT US</a></div>
                                 <!-- These 3 only show on mobile -->
                                 <div class="d-lg-none">
-                                    <a href="location.html" class="footer-link">LOCATIONS</a>
-                                    <a href="loyalty-programs.html" class="footer-link">LOYALTY PROGRAM</a>
-                                    <a href="career.html" class="footer-link">CAREER</a>
+                                    <div class="footer-link"><a href="location.html" class="nav-footer-link py-1">LOCATIONS</a></div>
+                                    <div class="footer-link"><a href="loyalty-programs.html" class="nav-footer-link py-1">LOYALTY PROGRAM</a></div>
+                                    <div class="footer-link"><a href="career.html" class="nav-footer-link py-1">CAREER</a></div>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +173,7 @@
             </div>
             
             <div class="row" style="height: 20px;">
-                <div class="col-12 line-container align-items-end footer-space">
+                <div class="col-12 line-container align-items-end footer-space" style="z-index: -1;">
                     <div class="line-with-icons">
                         <div class="footer-line"></div>
                         <div class="social-icons">
@@ -188,7 +192,7 @@
                 </div>
 
                 <div class="col-6 text-end">
-                    <p class="footer-bottom"> Building 3132 Rd 4653, Manama 346  | BLACK 22</p>
+                    <p class="footer-bottom"> © Black 22 Caffy Bar and Rostory. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -200,6 +204,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
     <!-- Responsive JS -->
-  <script src="/assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
