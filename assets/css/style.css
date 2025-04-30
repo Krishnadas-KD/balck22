@@ -254,6 +254,7 @@ p {
 .character-illustration {
     width: 200px;
     bottom: -50px;
+    max-height: 600px;
     left: 100px;
     z-index: 2;
 }
@@ -1057,3 +1058,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+        #home-link.hidden {
+            display: none;
+          }

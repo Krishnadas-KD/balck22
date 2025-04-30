@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 
-$query = "SELECT * FROM pages WHERE page_name = 'home'";
+$query = "SELECT * FROM pages WHERE page_name = 'home' and active=1";
 $result = $conn->query($query);
 
 if ($result->num_rows > 0) {
