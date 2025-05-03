@@ -1069,3 +1069,14 @@ body {
 .hidden {
     display: none !important;
     }
+
+
+
+      
+      .image-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        pointer-events: none;
+      }
