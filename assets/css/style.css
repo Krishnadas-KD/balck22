@@ -1070,18 +1070,3 @@ body {
     display: none !important;
     }
 
-
-    .image-wrapper {
-
-        background: #111; /* Dark background */
-      }
-      
-
-      
-      .image-wrapper::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        pointer-events: none;
-      }
