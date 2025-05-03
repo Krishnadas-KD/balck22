@@ -1071,6 +1071,11 @@ body {
     }
 
 
+    .image-wrapper {
+
+        background: #111; /* Dark background */
+      }
+      
 
       
       .image-wrapper::after {
