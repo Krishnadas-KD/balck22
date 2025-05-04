@@ -285,12 +285,19 @@ p {
 @media (max-width: 768px) {
     .hero-image {
         height: 50vh;
+
+        object-position: 80% center; /* show more of the right side */
+        margin: 0 auto;
     }
     .character-illustration {
-        
+        left: 0px;
+        right: 0px;
+        top:  0px;
+        bottom: 0px;
+        margin: auto;
+        padding: auto;
+        position: absolute; /* ensure it's positioned */
        
-        left: 20%;
-        bottom: 30px;
     }
     .navbar-collapse{
         padding:5px 0 0 0 ;
