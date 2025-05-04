@@ -530,8 +530,8 @@ p {
     position: relative;
     top: 0;
     right: 0;
-    justify-content: end;
-    top: -40px;
+    justify-content: flex-end;
+    top: -50px;
 }
 
 .social-icons a {
@@ -560,7 +560,7 @@ p {
 @media (min-width: 768px) {
     .social-icons {
         position: absolute;
-        top: -40px;
+        top: -50px;
         right: 0;
         justify-content: flex-end;
         margin: 0;
@@ -847,6 +847,11 @@ body {
         height: 40px;
         bottom: 20px;
         right: 20px;
+    }
+    
+    .copyright{
+        margin-left:30px ;
+        width: 170px;
     }
 }
 .gm-ui-hover-effect {
