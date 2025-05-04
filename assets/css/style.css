@@ -490,8 +490,13 @@ p {
 @media (max-width: 768px) {
     .footer-space {
         margin-bottom: 1rem;
-        bottom: 100px;
+        
+        bottom: 30px;
     }
+    .footer-line {
+        margin: 6px;
+    }
+    
 }
 
 @media (min-width: 768px) {
