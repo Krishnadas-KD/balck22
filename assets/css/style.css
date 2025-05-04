@@ -904,7 +904,7 @@ body {
   .steam:before {
     width: 8px;
     height: 14px;
-    background: rgba(194, 82, 7, 0.822);
+    background: rgba(160, 160, 160, 0.822);
     content: "";
     position: absolute;
     display: block;
