@@ -174,25 +174,7 @@ p {
     stroke: #000000;
 }
 
-.read-more-square img,
-.read-more-square svg {
-    width: 20px;
-    height: 20px;
-    stroke: #000000;
-    transition: transform 0.3s ease;
-}
 
-/* Jump effect on hover */
-.read-more-square:hover img,
-.read-more-square:hover svg {
-    animation: jump 0.5s ease;
-}
-
-@keyframes jump {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-}
 
 /* ========== NAVIGATION ========== */
 .navbar {
