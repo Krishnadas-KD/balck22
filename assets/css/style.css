@@ -305,40 +305,60 @@ p {
     }
 }
 
+.hero-content {
+    position: relative; /* Anchor for absolute child */
+}
+
+.logo-img-container {
+    position: absolute;
+    bottom: -20px; /* Adjust as needed */
+    right: -20px;  /* Adjust as needed */
+    z-index: 2;
+}
 
 .logo-img {
-    width: 150px;
-    left: 33vw;
-    bottom:  10vh;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+.logo-img {
+    width: 130px;
+    height: auto;
+}
+
+/* Desktop placement */
+.desktop-logo {
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
     z-index: 2;
-    margin-top:auto;
+    display: block;
 }
 
-
-
-@media (max-width: 992px) {
-    .logo-img { 
-        left: 24%;
-    }
+/* Mobile placement */
+.mobile-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    display: none;
 }
 
+/* Responsive switch */
 @media (max-width: 768px) {
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
     .logo-img {
-        width: 30vh;
-        max-height: 600px;
-        z-index: 2;
-        margin-top:auto;
-        left: 0px;
-        right: 0px;
-        top:  0px;
-        bottom: 0px;
-        margin: auto;
-        padding: auto;
-        position: absolute; /* ensure it's positioned */
-       
+        width: 80px;
     }
 }
-
 
 /* ========== BOTTOM SECTION ========== */
 .bottom-section {
