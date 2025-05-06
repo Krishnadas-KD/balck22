@@ -28,15 +28,18 @@
     </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark position-relative" >
-        <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="d-lg-none" href="index.html">
                 <img src="assets/images/name.svg" alt="head" class="head-logo">
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                
+                <!-- Left Nav -->
+                <ul class="navbar-nav ms-1 ms-lg-5 flex-grow-1 justify-content-end">
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
@@ -47,15 +50,17 @@
                         <a class="nav-link" href="shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contract.html"> Contact Us</a>
+                        <a class="nav-link" href="contract.html">Contact Us</a>
                     </li>
                 </ul>
-                
-                <a class="d-none d-lg-block" href="index.html">
+        
+                <!-- Center Logo -->
+                <a class="d-none d-lg-block mx-4" href="index.html">
                     <img src="assets/images/name.svg" alt="head" class="head-logo">
                 </a>
-                
-                <ul class="navbar-nav ms-auto">
+        
+                <!-- Right Nav -->
+                <ul class="navbar-nav me-1 me-lg-5 flex-grow-1 justify-content-start">
                     <li class="nav-item">
                         <a class="nav-link" href="order-now.html">Order Now</a>
                     </li>
@@ -66,9 +71,10 @@
                         <a class="nav-link" href="location.html">Locations</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="wac-2025.html">WAC-2025</a>
+                        <a class="nav-link" href="wac-2025.html">WAC-2025</a>
                     </li>
                 </ul>
+                
             </div>
         </div>
     </nav>

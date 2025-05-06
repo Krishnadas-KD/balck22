@@ -199,9 +199,7 @@ p {
     flex-direction: column;
 }
 
-.navbar-nav.ms-auto {
-    margin-top: 1rem;
-}
+
 
 .nav-link {
     white-space: nowrap;
@@ -304,6 +302,41 @@ p {
         background-color: #000000bd;
     }
 }
+
+
+.logo-img {
+    width: 150px;
+    left: 33vw;
+    bottom:  10vh;
+    z-index: 2;
+    margin-top:auto;
+}
+
+
+
+@media (max-width: 992px) {
+    .logo-img { 
+        left: 24%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        width: 30vh;
+        max-height: 600px;
+        z-index: 2;
+        margin-top:auto;
+        left: 0px;
+        right: 0px;
+        top:  0px;
+        bottom: 0px;
+        margin: auto;
+        padding: auto;
+        position: absolute; /* ensure it's positioned */
+       
+    }
+}
+
 
 /* ========== BOTTOM SECTION ========== */
 .bottom-section {
@@ -711,6 +744,9 @@ body {
 .character-illustration {
     animation: float 4s ease-in-out infinite;
 }
+.logo-img {
+    animation: float 4s ease-in-out infinite;
+}
 
 /* Button hover animations */
 .read-more-wrapper:hover {
@@ -756,6 +792,29 @@ body {
 /* Navigation underline animation */
 .nav-link {
     position: relative;
+}
+
+ /* Custom styling for perfect centering */
+ @media (min-width: 992px) {
+    .navbar {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .navbar-collapse {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .navbar-nav:first-child {
+        margin-right: auto;
+        padding-right: 3rem;
+    }
+    .navbar-nav:last-child {
+        margin-left: auto;
+        padding-left: 3rem;
+    }
+    .head-logo {
+        margin: 0 4rem;
+    }
 }
 
 .nav-link::after {
